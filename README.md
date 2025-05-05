@@ -84,6 +84,7 @@ The outcomes/results of the Project can be summarized as follows:
     * Functional Testing can be performed by running the script, ```./run_script.sh``` within the ```./functional_testing``` directory
     * If the _diff_ output from the script shows that the generated sequential and parallel outputs were identical, it denotes that the Functional Testing was successful
     * The recorded outputs are contained in the generated ```./functional_testing/output``` directory
+    * It has to be noted that Functional Testing uses a slightly different version of the _"header_par_db.h"_, named _"header_par_db_ft.h"_ contained in the ```./functional_testing``` directory. This is because the parallel sort in _"header_par_db_ft.h"_ switches to a sequential merge and sequential sort for smaller block sizes as compared to the header in ```./include```, which is optimized for performance. This ensures that parallel behaviour is invoked and verified despite the functional tests having fewer records.
 * Performance Testing
     * Performance Testing can be performed by running the script, ```./run_script.sh``` within the ```./performance_testing``` directory
     * The recorded timing measurements are contained in the generated ```./performance_testing/timing_measurements``` directory
