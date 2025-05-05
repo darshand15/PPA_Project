@@ -1,0 +1,345 @@
+[dd3888@crunchy5 timing_measurements]$ cat select_pk_eq_timing.txt 
+Sequential Time Taken: 193048 nanoseconds
+BTree Time Taken: 10137 nanoseconds
+Sequential Time Taken: 176861 nanoseconds
+BTree Time Taken: 9462 nanoseconds
+Sequential Time Taken: 195317 nanoseconds
+BTree Time Taken: 9608 nanoseconds
+Sequential Time Taken: 180663 nanoseconds
+BTree Time Taken: 9403 nanoseconds
+Sequential Time Taken: 177892 nanoseconds
+BTree Time Taken: 9823 nanoseconds
+Sequential Time Taken: 177192 nanoseconds
+BTree Time Taken: 9616 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+193048
+9462
+
+[dd3888@crunchy5 timing_measurements]$ cat select_pk_range_timing.txt 
+Sequential Time Taken: 759451 nanoseconds
+BTree Time Taken: 422897 nanoseconds
+Sequential Time Taken: 772106 nanoseconds
+BTree Time Taken: 449411 nanoseconds
+Sequential Time Taken: 772806 nanoseconds
+BTree Time Taken: 435169 nanoseconds
+Sequential Time Taken: 759204 nanoseconds
+BTree Time Taken: 433409 nanoseconds
+Sequential Time Taken: 765120 nanoseconds
+BTree Time Taken: 463427 nanoseconds
+Sequential Time Taken: 766630 nanoseconds
+BTree Time Taken: 444547 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+772806
+422897
+
+
+[dd3888@crunchy5 timing_measurements]$ cat select_all_cond_timing.txt 
+Sequential Time Taken: 12437788 nanoseconds
+Parallel Time Taken: 13424832 nanoseconds
+Sequential Time Taken: 12807958 nanoseconds
+Parallel Time Taken: 21437205 nanoseconds
+Sequential Time Taken: 12770447 nanoseconds
+Parallel Time Taken: 20491251 nanoseconds
+Sequential Time Taken: 12493780 nanoseconds
+Parallel Time Taken: 21804433 nanoseconds
+Sequential Time Taken: 13137535 nanoseconds
+Parallel Time Taken: 24719290 nanoseconds
+Sequential Time Taken: 12746217 nanoseconds
+Parallel Time Taken: 24894595 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+Sequential Time Taken: 12437788 nanoseconds
+Parallel Time Taken: 13424832 nanoseconds
+Parallel Time Taken: 21437205 nanoseconds
+Parallel Time Taken: 20491251 nanoseconds
+Parallel Time Taken: 21804433 nanoseconds
+Parallel Time Taken: 24719290 nanoseconds
+Parallel Time Taken: 24894595 nanoseconds
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat select_cols_cond_timing.txt 
+Sequential Time Taken: 5297324 nanoseconds
+Parallel Time Taken: 6534284 nanoseconds
+Sequential Time Taken: 5443704 nanoseconds
+Parallel Time Taken: 10056580 nanoseconds
+Sequential Time Taken: 5491840 nanoseconds
+Parallel Time Taken: 13086180 nanoseconds
+Sequential Time Taken: 5306460 nanoseconds
+Parallel Time Taken: 15742792 nanoseconds
+Sequential Time Taken: 5460901 nanoseconds
+Parallel Time Taken: 20936216 nanoseconds
+Sequential Time Taken: 5456808 nanoseconds
+Parallel Time Taken: 23590524 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+Sequential Time Taken: 5460901 nanoseconds
+Parallel Time Taken: 6534284 nanoseconds
+Parallel Time Taken: 10056580 nanoseconds
+Parallel Time Taken: 13086180 nanoseconds
+Parallel Time Taken: 15742792 nanoseconds
+Parallel Time Taken: 20936216 nanoseconds
+Parallel Time Taken: 23590524 nanoseconds
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat order_by_asc_timing.txt 
+Sequential Time Taken: 45102283 nanoseconds
+Parallel Time Taken: 39859169 nanoseconds
+Sequential Time Taken: 46374941 nanoseconds
+Parallel Time Taken: 26345854 nanoseconds
+Sequential Time Taken: 46004174 nanoseconds
+Parallel Time Taken: 22752505 nanoseconds
+Sequential Time Taken: 45504354 nanoseconds
+Parallel Time Taken: 21028301 nanoseconds
+Sequential Time Taken: 45558739 nanoseconds
+Parallel Time Taken: 20538958 nanoseconds
+Sequential Time Taken: 46302147 nanoseconds
+Parallel Time Taken: 22799743 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+Sequential Time Taken: 45102283 nanoseconds
+Parallel Time Taken: 39859169 nanoseconds
+Parallel Time Taken: 26345854 nanoseconds
+Parallel Time Taken: 22752505 nanoseconds
+Parallel Time Taken: 21028301 nanoseconds
+Parallel Time Taken: 20538958 nanoseconds
+Parallel Time Taken: 22799743 nanoseconds
+
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat order_by_desc_timing.txt 
+Sequential Time Taken: 24765603 nanoseconds
+Parallel Time Taken: 22795345 nanoseconds
+Sequential Time Taken: 24685639 nanoseconds
+Parallel Time Taken: 20145320 nanoseconds
+Sequential Time Taken: 25115304 nanoseconds
+Parallel Time Taken: 18851401 nanoseconds
+Sequential Time Taken: 24968860 nanoseconds
+Parallel Time Taken: 18221321 nanoseconds
+Sequential Time Taken: 25477543 nanoseconds
+Parallel Time Taken: 18361074 nanoseconds
+Sequential Time Taken: 24816136 nanoseconds
+Parallel Time Taken: 19832191 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+
+
+Sequential Time Taken: 24765603 nanoseconds
+Parallel Time Taken: 22795345 nanoseconds
+Parallel Time Taken: 20145320 nanoseconds
+Parallel Time Taken: 18851401 nanoseconds
+Parallel Time Taken: 18221321 nanoseconds
+Parallel Time Taken: 18361074 nanoseconds
+Parallel Time Taken: 19832191 nanoseconds
+
+
+
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat group_by_count_timing.txt 
+Sequential Time Taken: 14658555 nanoseconds
+Parallel Version 1 Time Taken: 14525955 nanoseconds
+Parallel Version 2 Time Taken: 17410500 nanoseconds
+Sequential Time Taken: 13231053 nanoseconds
+Parallel Version 1 Time Taken: 7546431 nanoseconds
+Parallel Version 2 Time Taken: 8637613 nanoseconds
+Sequential Time Taken: 13216837 nanoseconds
+Parallel Version 1 Time Taken: 4613332 nanoseconds
+Parallel Version 2 Time Taken: 5036981 nanoseconds
+Sequential Time Taken: 14223476 nanoseconds
+Parallel Version 1 Time Taken: 3280320 nanoseconds
+Parallel Version 2 Time Taken: 3602305 nanoseconds
+Sequential Time Taken: 13204627 nanoseconds
+Parallel Version 1 Time Taken: 2442168 nanoseconds
+Parallel Version 2 Time Taken: 2722171 nanoseconds
+Sequential Time Taken: 13645681 nanoseconds
+Parallel Version 1 Time Taken: 2388399 nanoseconds
+Parallel Version 2 Time Taken: 2617563 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+
+
+Sequential Time Taken: 14658555 nanoseconds
+Parallel Version 1 Time Taken: 14525955 nanoseconds
+Parallel Version 2 Time Taken: 17410500 nanoseconds
+Parallel Version 1 Time Taken: 7546431 nanoseconds
+Parallel Version 2 Time Taken: 8637613 nanoseconds
+Parallel Version 1 Time Taken: 4613332 nanoseconds
+Parallel Version 2 Time Taken: 5036981 nanoseconds
+Parallel Version 1 Time Taken: 3280320 nanoseconds
+Parallel Version 2 Time Taken: 3602305 nanoseconds
+Parallel Version 1 Time Taken: 2442168 nanoseconds
+Parallel Version 2 Time Taken: 2722171 nanoseconds
+Parallel Version 1 Time Taken: 2388399 nanoseconds
+Parallel Version 2 Time Taken: 2617563 nanoseconds
+
+
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat group_by_min_timing.txt 
+Sequential Time Taken: 13925847 nanoseconds
+Parallel Version 1 Time Taken: 14454043 nanoseconds
+Parallel Version 2 Time Taken: 17592924 nanoseconds
+Sequential Time Taken: 12718182 nanoseconds
+Parallel Version 1 Time Taken: 7626134 nanoseconds
+Parallel Version 2 Time Taken: 8728577 nanoseconds
+Sequential Time Taken: 12779879 nanoseconds
+Parallel Version 1 Time Taken: 4714976 nanoseconds
+Parallel Version 2 Time Taken: 5008321 nanoseconds
+Sequential Time Taken: 13917404 nanoseconds
+Parallel Version 1 Time Taken: 3559912 nanoseconds
+Parallel Version 2 Time Taken: 3212314 nanoseconds
+Sequential Time Taken: 12836665 nanoseconds
+Parallel Version 1 Time Taken: 2585584 nanoseconds
+Parallel Version 2 Time Taken: 2229355 nanoseconds
+Sequential Time Taken: 14301168 nanoseconds
+Parallel Version 1 Time Taken: 2581363 nanoseconds
+Parallel Version 2 Time Taken: 2158241 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+
+Sequential Time Taken: 13925847 nanoseconds
+Parallel Version 1 Time Taken: 14454043 nanoseconds
+Parallel Version 2 Time Taken: 17592924 nanoseconds
+Parallel Version 1 Time Taken: 7626134 nanoseconds
+Parallel Version 2 Time Taken: 8728577 nanoseconds
+Parallel Version 1 Time Taken: 4714976 nanoseconds
+Parallel Version 2 Time Taken: 5008321 nanoseconds
+Parallel Version 1 Time Taken: 3559912 nanoseconds
+Parallel Version 2 Time Taken: 3212314 nanoseconds
+Parallel Version 1 Time Taken: 2585584 nanoseconds
+Parallel Version 2 Time Taken: 2229355 nanoseconds
+Parallel Version 1 Time Taken: 2581363 nanoseconds
+Parallel Version 2 Time Taken: 2158241 nanoseconds
+
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat group_by_max_timing.txt 
+Sequential Time Taken: 13846483 nanoseconds
+Parallel Version 1 Time Taken: 14258524 nanoseconds
+Parallel Version 2 Time Taken: 17125440 nanoseconds
+Sequential Time Taken: 12827957 nanoseconds
+Parallel Version 1 Time Taken: 7485165 nanoseconds
+Parallel Version 2 Time Taken: 8345500 nanoseconds
+Sequential Time Taken: 12800958 nanoseconds
+Parallel Version 1 Time Taken: 4705510 nanoseconds
+Parallel Version 2 Time Taken: 4714548 nanoseconds
+Sequential Time Taken: 13856404 nanoseconds
+Parallel Version 1 Time Taken: 3480749 nanoseconds
+Parallel Version 2 Time Taken: 2840275 nanoseconds
+Sequential Time Taken: 12844215 nanoseconds
+Parallel Version 1 Time Taken: 2685032 nanoseconds
+Parallel Version 2 Time Taken: 1832335 nanoseconds
+Sequential Time Taken: 14376518 nanoseconds
+Parallel Version 1 Time Taken: 2449663 nanoseconds
+Parallel Version 2 Time Taken: 1690007 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+
+
+Sequential Time Taken: 13846483 nanoseconds
+Parallel Version 1 Time Taken: 14258524 nanoseconds
+Parallel Version 2 Time Taken: 17125440 nanoseconds
+Parallel Version 1 Time Taken: 7485165 nanoseconds
+Parallel Version 2 Time Taken: 8345500 nanoseconds
+Parallel Version 1 Time Taken: 4705510 nanoseconds
+Parallel Version 2 Time Taken: 4714548 nanoseconds
+Parallel Version 1 Time Taken: 3480749 nanoseconds
+Parallel Version 2 Time Taken: 2840275 nanoseconds
+Parallel Version 1 Time Taken: 2685032 nanoseconds
+Parallel Version 2 Time Taken: 1832335 nanoseconds
+Parallel Version 1 Time Taken: 2449663 nanoseconds
+Parallel Version 2 Time Taken: 1690007 nanoseconds
+
+
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat group_by_sum_timing.txt 
+Sequential Time Taken: 14228056 nanoseconds
+Parallel Version 1 Time Taken: 14537624 nanoseconds
+Parallel Version 2 Time Taken: 17477068 nanoseconds
+Sequential Time Taken: 12710096 nanoseconds
+Parallel Version 1 Time Taken: 7494801 nanoseconds
+Parallel Version 2 Time Taken: 8478224 nanoseconds
+Sequential Time Taken: 12796500 nanoseconds
+Parallel Version 1 Time Taken: 4807647 nanoseconds
+Parallel Version 2 Time Taken: 4698495 nanoseconds
+Sequential Time Taken: 13925139 nanoseconds
+Parallel Version 1 Time Taken: 3483091 nanoseconds
+Parallel Version 2 Time Taken: 2894469 nanoseconds
+Sequential Time Taken: 12849830 nanoseconds
+Parallel Version 1 Time Taken: 2700204 nanoseconds
+Parallel Version 2 Time Taken: 1860128 nanoseconds
+Sequential Time Taken: 14445561 nanoseconds
+Parallel Version 1 Time Taken: 2388501 nanoseconds
+Parallel Version 2 Time Taken: 1717681 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+
+
+Sequential Time Taken: 14228056 nanoseconds
+Parallel Version 1 Time Taken: 14537624 nanoseconds
+Parallel Version 2 Time Taken: 17477068 nanoseconds
+Parallel Version 1 Time Taken: 7494801 nanoseconds
+Parallel Version 2 Time Taken: 8478224 nanoseconds
+Parallel Version 1 Time Taken: 4807647 nanoseconds
+Parallel Version 2 Time Taken: 4698495 nanoseconds
+Parallel Version 1 Time Taken: 3483091 nanoseconds
+Parallel Version 2 Time Taken: 2894469 nanoseconds
+Parallel Version 1 Time Taken: 2700204 nanoseconds
+Parallel Version 2 Time Taken: 1860128 nanoseconds
+Parallel Version 1 Time Taken: 2388501 nanoseconds
+Parallel Version 2 Time Taken: 1717681 nanoseconds
+
+
+
+
+
+
+[dd3888@crunchy5 timing_measurements]$ cat group_by_avg_timing.txt 
+Sequential Time Taken: 14005942 nanoseconds
+Parallel Version 1 Time Taken: 14221665 nanoseconds
+Parallel Version 2 Time Taken: 17264520 nanoseconds
+Sequential Time Taken: 12792631 nanoseconds
+Parallel Version 1 Time Taken: 7462017 nanoseconds
+Parallel Version 2 Time Taken: 8451165 nanoseconds
+Sequential Time Taken: 12792426 nanoseconds
+Parallel Version 1 Time Taken: 4726323 nanoseconds
+Parallel Version 2 Time Taken: 4749604 nanoseconds
+Sequential Time Taken: 14054908 nanoseconds
+Parallel Version 1 Time Taken: 3371093 nanoseconds
+Parallel Version 2 Time Taken: 2961512 nanoseconds
+Sequential Time Taken: 12868599 nanoseconds
+Parallel Version 1 Time Taken: 2595764 nanoseconds
+Parallel Version 2 Time Taken: 1837230 nanoseconds
+Sequential Time Taken: 14451505 nanoseconds
+Parallel Version 1 Time Taken: 2575038 nanoseconds
+Parallel Version 2 Time Taken: 1664582 nanoseconds
+[dd3888@crunchy5 timing_measurements]$ 
+
+
+
+
+Sequential Time Taken: 14005942 nanoseconds
+Parallel Version 1 Time Taken: 14221665 nanoseconds
+Parallel Version 2 Time Taken: 17264520 nanoseconds
+Parallel Version 1 Time Taken: 7462017 nanoseconds
+Parallel Version 2 Time Taken: 8451165 nanoseconds
+Parallel Version 1 Time Taken: 4726323 nanoseconds
+Parallel Version 2 Time Taken: 4749604 nanoseconds
+Parallel Version 1 Time Taken: 3371093 nanoseconds
+Parallel Version 2 Time Taken: 2961512 nanoseconds
+Parallel Version 1 Time Taken: 2595764 nanoseconds
+Parallel Version 2 Time Taken: 1837230 nanoseconds
+Parallel Version 1 Time Taken: 2575038 nanoseconds
+Parallel Version 2 Time Taken: 1664582 nanoseconds
+
+
